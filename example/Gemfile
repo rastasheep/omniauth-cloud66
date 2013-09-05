@@ -1,0 +1,6 @@
+source :rubygems
+
+gem 'sinatra'
+gem 'omniauth'
+gem 'omniauth-cloud66', :path => '../'
+gem 'multi_json'
