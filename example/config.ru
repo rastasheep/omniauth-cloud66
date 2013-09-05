@@ -20,5 +20,5 @@ end
 use Rack::Session::Cookie
 
 use OmniAuth::Builder do
-  provider :cloud66, ENV['CONSUMER_KEY'], ENV['CONSUMER_SECRET']
+  provider :cloud66, ENV['CONSUMER_KEY'], ENV['CONSUMER_SECRET'], scope: "public,redeploy"
 end

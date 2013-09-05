@@ -11,27 +11,36 @@ Now you can register your API client. Click on New Application button and enter 
 
 For more info visit [Cloud 66 official docs](https://www.cloud66.com/help).
 
-## Basic usage
+## Usage
+
+Add the strategy to your `Gemfile`:
 
 ```ruby
-  use OmniAuth::Builder do
-    provider :cloud66, ENV['CLIENT_ID'], ENV['CLIENT_SECRET']
-  end
+gem 'omniauth-cloud66'
 ```
 
-## Scopes
-
-Cloud 66 API lets you set scopes to provide granular access to different types of data:
+Then integrate the strategy into your middleware:
 
 ```ruby
-	use OmniAuth::Builder do
-      provider :cloud66, ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], scope: "public,redeploy"
-  end
+use OmniAuth::Builder do
+  provider :cloud66, ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], scope: "public,redeploy"
+end
 ```
 
-More info on [Scopes](https://www.cloud66.com/help/basics#scopes).
+In Rails, you'll want to add to the middleware stack:
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :cloud66, ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], scope: "public,redeploy"
+end
+```
+
+
+For additional information, refer to the [OmniAuth wiki](https://github.com/intridea/omniauth/wiki).
+
+See the [example](https://github.com/rastasheep/omniauth-cloud66/blob/master/example/config.ru) Sinatra app for full examples
 
 ## License
 
 omniauth-cloud66 is released under the MIT License.
-Developed by [rastasheep](https://github.com/rastasheep).
+Developed by [Aleksandar Diklic](https://github.com/rastasheep).
