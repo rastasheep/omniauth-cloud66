@@ -23,7 +23,7 @@ Then integrate the strategy into your middleware:
 
 ```ruby
 use OmniAuth::Builder do
-  provider :cloud66, ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], scope: "public,redeploy"
+  provider :cloud66, ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], scope: "public redeploy"
 end
 ```
 
@@ -31,9 +31,11 @@ In Rails, you'll want to add to the middleware stack:
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :cloud66, ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], scope: "public,redeploy"
+  provider :cloud66, ENV['CLIENT_ID'], ENV['CLIENT_SECRET'], scope: "public redeploy"
 end
 ```
+
+- The scope needs to be separated by space and not comma: "public redeploy" instead of "public,redeploy" !
 
 
 For additional information, refer to the [OmniAuth wiki](https://github.com/intridea/omniauth/wiki).
