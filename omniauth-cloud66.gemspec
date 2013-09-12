@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Unfficial OmniAuth strategy for Cloud66.}
   gem.summary       = %q{Unfficial OmniAuth strategy for Cloud66.}
   gem.homepage      = "https://github.com/rastasheep/omniauth-cloud66"
+  gem.license       = "MIT"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
