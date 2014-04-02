@@ -4,9 +4,9 @@ module OmniAuth
   module Strategies
     class Cloud66 < OmniAuth::Strategies::OAuth2
       option :client_options, {
-        :site => "https://www.cloud66.com/api/2",
-        :authorize_url => "https://www.cloud66.com/oauth/authorize" ,
-        :token_url => "https://www.cloud66.com/oauth/token"
+        :site => "https://app.cloud66.com/api/2",
+        :authorize_url => "https://app.cloud66.com/oauth/authorize" ,
+        :token_url => "https://app.cloud66.com/oauth/token"
       }
 
       def request_phase
