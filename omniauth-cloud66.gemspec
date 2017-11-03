@@ -4,8 +4,8 @@ require File.expand_path('../lib/omniauth-cloud66/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Aleksandar Diklic"]
   gem.email         = ["rastasheep@gmail.com"]
-  gem.description   = %q{Unfficial OmniAuth strategy for Cloud66.}
-  gem.summary       = %q{Unfficial OmniAuth strategy for Cloud66.}
+  gem.description   = %q{Unofficial OmniAuth strategy for Cloud66.}
+  gem.summary       = %q{Unofficial OmniAuth strategy for Cloud66.}
   gem.homepage      = "https://github.com/rastasheep/omniauth-cloud66"
   gem.license       = "MIT"
 
