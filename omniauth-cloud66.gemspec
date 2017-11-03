@@ -4,8 +4,8 @@ require File.expand_path('../lib/omniauth-cloud66/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Aleksandar Diklic"]
   gem.email         = ["rastasheep@gmail.com"]
-  gem.description   = %q{Unfficial OmniAuth strategy for Cloud66.}
-  gem.summary       = %q{Unfficial OmniAuth strategy for Cloud66.}
+  gem.description   = %q{Unofficial OmniAuth strategy for Cloud66.}
+  gem.summary       = %q{Unofficial OmniAuth strategy for Cloud66.}
   gem.homepage      = "https://github.com/rastasheep/omniauth-cloud66"
   gem.license       = "MIT"
 
@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.version       = OmniAuth::Cloud66::VERSION
 
   gem.add_dependency 'omniauth', '~> 1.0'
-  gem.add_dependency 'omniauth-oauth2', '~> 1.0'
+  gem.add_dependency 'omniauth-oauth2', '>= 1.4.0', '< 2.0'
   gem.add_development_dependency 'rspec', '~> 2.7'
   gem.add_development_dependency 'rack-test'
   gem.add_development_dependency 'simplecov'

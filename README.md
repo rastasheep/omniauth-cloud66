@@ -1,3 +1,5 @@
+[![Build Status](https://semaphoreci.com/api/v1/renderedtext/omniauth-cloud66/branches/master/shields_badge.svg)](https://semaphoreci.com/renderedtext/omniauth-cloud66)
+
 # OmniAuth Cloud66
 
 This is the unofficial OmniAuth strategy for authenticating to [Cloud 66](https://www.cloud66.com).
